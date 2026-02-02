@@ -1,0 +1,13 @@
+{
+  "name": "open-guild",
+  "private": true,
+  "packageManager": "pnpm@9.15.4",
+  "scripts": {
+    "dev": "pnpm -C apps/web dev",
+    "build": "pnpm -C packages/agent-sdk build && pnpm -C apps/web build",
+    "lint": "pnpm -C packages/agent-sdk lint && pnpm -C apps/web lint",
+    "typecheck": "pnpm -C packages/agent-sdk typecheck && pnpm -C apps/web typecheck",
+    "test": "pnpm -C packages/agent-sdk test && pnpm -C apps/web test",
+    "format": "pnpm -C packages/agent-sdk format && pnpm -C apps/web format"
+  }
+}

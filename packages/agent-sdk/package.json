@@ -1,0 +1,32 @@
+{
+  "name": "@open-guild/agent-sdk",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup",
+    "lint": "node -e \"console.log('agent-sdk: lint skipped (use typecheck)')\"",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --import tsx --test",
+    "format": "prettier -w ."
+  },
+  "dependencies": {
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "prettier": "^3.5.1",
+    "tsup": "^8.5.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5"
+  }
+}
